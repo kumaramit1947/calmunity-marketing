@@ -2,10 +2,13 @@
   box-sizing: border-box;
 }
 :root {
-  --primary-blue: #004aad;
+  --primary-blue: #377cd7;
   --fog-white: #D5DCDE;
   --mon-space: "Lucida Console", "Courier New", monospace;
   --sans-serif: "Roboto", sans-serif;
+  --primary-black: #000;
+  --primary-green: #1eb2aa;
+  --green: #052e2c;
 
 }
 html {
@@ -13,7 +16,7 @@ html {
   width: 100vw;
   margin: 0;
   padding: 0 0;
-  background: var(--fog-white);
+  background: var(--primary-black);
 }
 body {
   height: 100%;
@@ -24,7 +27,6 @@ body {
 .full-page {
   height: 100%;
   width: 100%;
-  background: var(--fog-white);
 }
 .full-page .image-container {
   width: 100%;
@@ -34,26 +36,40 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  mask-image: linear-gradient(to bottom, transparent, black 25%, black 75%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 40%, black 60%, transparent);
   
 }
 
 .full-page .chat-section {
+  position: relative;
+  top: -20px;
   height: fit-content;
   width: 90%;
   margin: 0 auto;
   padding: 2px;
+  margin-bottom: 5px;
+  
 }
 .full-page .chat-section .chat-container {
   display: flex;
   gap: 10px;
-  font-family: var(--mon-space);
+  font-family: var(--sans-serif);
   margin: 10px 0;
+  color: var(--fog-white);
 }
 .full-page .chat-section .chat-container .chat-name {
   font-size: 20px;
   font-weight: 500;
-  min-width: 105px;
+  min-width: 80px;
+}
+
+.full-page .chat-section .chat-container:nth-child(odd) .chat-name{
+  color: var(--primary-green);
+
+}
+.full-page .chat-section .chat-container:nth-child(even) .chat-name{
+  color: var(--primary-blue);
+
 }
 .full-page .chat-section .chat-container .chat-text {
   font-size: 18px;
@@ -61,28 +77,24 @@ body {
 
 .full-page .button-section {
   width: 100%;
-  margin-top: 15px;
   text-align: center;
+  margin-top: 15px;
 }
 
 .full-page .button-section .button-link {
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   padding: 10px 10px;
-  color: var(--primary-blue);
+  color: var(--fog-white);
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  background: var(--fog-white);
-  border: 2px solid var(--primary-blue);
+  background: var(--primary-green);
+  border: 2px solid var(--primary-green);
   font-family: var(--mono-space);
   transition: background 0.1s ease-in, color 0.1s ease-in;
-  font-family: var(--sans-serif)
-}
-
-.full-page .button-section .button-link:hover {
-  background: var(--primary-blue);
-  color: var(--fog-white)!important;
+  font-family: var(--sans-serif);
+  font-weight: bold;
 }
 
 .hide {

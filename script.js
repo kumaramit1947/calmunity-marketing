@@ -7,12 +7,12 @@ const chatList = [
   {
     id: 2,
     name: "Sushant",
-    text: "What! No man. But, why do you need it?"
+    text: "But, why do you need it?"
   },
   {
     id: 3,
     name: "Chandler",
-    text: "I just... I think...  I am going through depression. So maybe..."
+    text: "Just to get over depression and all."
   },
   {
     id: 4,
